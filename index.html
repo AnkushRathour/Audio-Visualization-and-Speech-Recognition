@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualization and Speech Recognition</title>
+    <!-- Bootstrap.css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <span><h1>Audio Visualization and Speech Recognition</h1></span>
+            <span>using <a href="https://wavesurfer.xyz/" target="_blank">WaveSurfer</a>
+                 and <a href="https://alphacephei.com/vosk/" target="_blank">Vosk</a>.
+            </span>
+            <br><br>
+            <span id="status" class="mt-5"></span>
+        </div>
+        <input type="file" class="form-control mt-2 mb-4" id="fileUpload" accept="audio/*">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-4">
+                <div id="waveform"></div>
+                <audio id="audio-grabber" autoplay hidden></audio>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-4">
+                <div class="card" id="transcriptContainer">
+                    <div class="card-header"><strong>Transcription</strong></div>
+                    <div class="card-body transcriptbody">
+                        <div id="recognition-result" class="text-end">
+                            <span id="partial" class="bg-light rounded py-2 px-3 mr-3 mt-2 mb-2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="https://github.com/AnkushRathour/Audio-Visualization-and-Speech-Recognition" target="_blank">
+                Audio Visualization and Speech Recognition Github Repository
+            </a>
+            <p class="mt-2">
+                <span id="copyright-owner">Copyright
+                    <script>document.getElementById('copyright-owner').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                </span>
+                <a href="https://github.com/AnkushRathour" target="_blank">Ankush Rathour</a>.  
+                <span id="copyright-model" target="_blank">Model Copyright
+                    <script>document.getElementById('copyright-model').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                </span>
+                <a href="https://alphacephei.com/en/" target="_blank">Alpha Cephei</a> Inc. All Rights Reserved. 
+                <a href="https://alphacephei.com/vosk/models" target="_blank">Distributed</a> under MIT license.
+            </p>
+        </div>
+    </div>
+
+    <!-- Bootstrap.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Speech Recognition Vosk.js -->
+    <script src="vosk.js"></script>
+    <!-- WaveSurfer.js -->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

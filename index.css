@@ -1,0 +1,28 @@
+#waveform {
+    display: none;
+    width: 100%;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border-radius: 20px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: rgb(255, 255, 255);
+}
+
+audio::-webkit-media-controls-enclosure {
+    border-radius: 0px;
+}
+
+#transcriptContainer {
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border-radius: 20px;
+    display: none;
+}
+
+.transcriptbody {
+    max-height: 210px;
+    min-height: 210px;
+    overflow-y: scroll;
+}
